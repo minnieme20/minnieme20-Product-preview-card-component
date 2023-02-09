@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: hsl(30, 38%, 92%);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    color:  hsl(228, 12%, 48%);
+    padding-top: 100px;
+    min-height: 100vh;
+}
+
+h6{
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+}
+
+h2{
+    font-size: 30px;
+    font-family: 'Fraunces', serif;
+    line-height: 1em;
+    color: hsl(212, 21%, 14%);
+    padding-right: 40px;
+}    
+
+.container{
+    margin: 30px auto;
+    padding: 0 30px;
+}
+
+.card{
+    max-width: 650px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.prod-img img{
+    max-width: 100%;
+    display: inherit;
+}
+
+.prod-info{
+    padding: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.prod-desc{
+    line-height: 25px;
+    margin-bottom: 0;
+}
+
+.price{
+    display: flex;
+    align-items: center;
+    
+}
+
+.current-price{
+    font-size: 28px;
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+    padding-right: 20px;
+}
+
+.old-price{
+    text-decoration: line-through;
+}
+
+button{
+    display: block;
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+    padding: 14px 0;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transform: .5s all ease;
+}
+button img{
+    padding-right: 8px;
+}
+button:hover{
+    background-color: hsl(212, 21%, 14%);
+}
+
+
+@media only screen and (max-width: 628px) {
+    body{
+        padding-top: 10px;
+    }
+    
+    .card{
+        grid-template-columns: 1fr;
+    }
+    .prod-img img{
+        max-height: 290px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .prod-info{
+        display: block;
+    }
+    h6, h2, .prod-desc, .price{
+        padding-bottom: 23px;
+    }
+
+    button{
+        padding: 12px 70px;
+    }
+} 
+
+@media only screen and (max-width: 375px) {
+    .container{
+        margin: 15px 0;
+        padding: 0 15px;
+    }
+
+    .prod-info{
+        padding: 24px;
+    }
+
+    h6, h2, .prod-desc, .price{
+        padding-bottom: 16px;
+    }
+
+    h2{
+        font-size: 28px;
+    }
+
+    .current-price{
+        font-size: 23px;
+    }
+
+    button{
+        padding: 10px 0;
+        font-size: 14px;
+    }
+} 

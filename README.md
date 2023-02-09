@@ -1,0 +1,1 @@
+this is the product preview card component. with this i have practiced the display grid property. 
